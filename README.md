@@ -56,7 +56,7 @@ After I imported the kaggle dataset, thankfully it was almost clean, but I edite
      ```python
     all_data.to_csv("cleaned_data.csv", index=False) 
     ```
-
+    
 ## Exploratory Data Analysis (EDA)
 I looked at the distributions of the data and the value counts for the various numerical & categorical variables. Below are a few highlights of the visualizations.
 
@@ -96,11 +96,10 @@ The Random Forest model far outperformed the other approaches regarding it's sco
 ## Model Tuning
 To sum it all up, always we need to find what help us in using less computational complexity and since there is no significant score difference when utilizing different number of estimators as shown below, I will use the n_estimators = 100.
 
-    ```python
-       for i in range(100, 200, 10):
+```python
+for i in range(100, 200, 10):
           print((i, np.mean(cross_val_score(RandomForestRegressor(n_estimators = i), X, np.ravel(y)))))
-    ```
-
+```
 
 ## Contact
 * You can email me on: amjad.baba91@gmail.com.  
