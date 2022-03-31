@@ -68,7 +68,27 @@ I looked at the distributions of the data and the value counts for the various n
 
 ![alt text](https://github.com/amjadalbaba/Health_Insurance_Cost_Predictor/blob/master/Images/scatter.png)
 
+## Model Building 
+
+First, I transformed the categorical variables into dummy variables as a prerequisite:
+
+```python
+all_data_dum = pd.get_dummies(all_data)
+```
+
+Then, I made the data split into train and tests sets with a test size of 20%.   
+
+I tried three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.   
+
+I tried three different models:
+
+*	**Linear Regression** 
+*	**Lasso Regression** 
+*	**Random Forest**  
+
+## Model performance
+The Random Forest model far outperformed the other approaches on the test and validation sets. 
 
 ## Contact
-* You can email me [here](amjad.baba91@gmail.com).  
+* You can email me on: amjad.baba91@gmail.com.  
 * Get in touch with my blog posts on [medium](https://medium.com/@amjad.baba913), and don't forget to drop your comments!
