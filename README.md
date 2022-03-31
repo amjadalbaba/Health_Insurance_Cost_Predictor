@@ -78,16 +78,29 @@ all_data_dum = pd.get_dummies(all_data)
 
 Then, I made the data split into train and tests sets with a test size of 20%.   
 
-I tried three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.   
+I tried three different models and evaluated them using ```cross_val_score```. I chose cross validation because it can show how each algorithm will act on my model and which one will give the highest score by applying different train/test splits.   
 
 I tried three different models:
 
-*	**Linear Regression** 
-*	**Lasso Regression** 
-*	**Random Forest**  
+* Linear Regression
+* Lasso Regression
+* Random Forest  
 
 ## Model performance
-The Random Forest model far outperformed the other approaches on the test and validation sets. 
+The Random Forest model far outperformed the other approaches regarding it's score. 
+
+*	**Linear Regression** : ```[0.75229225, 0.78832069, 0.7388152 , 0.69943941, 0.7462162]```
+*	**Lasso Regression**  : ```[0.75224359, 0.78835653, 0.73883871, 0.69949229, 0.74622792]```
+*	**Random Forest**     : ```[0.84178716, 0.86191325, 0.8137814 , 0.8308621 , 0.82653594]```
+
+## Model Tuning
+To sum it all up, always we need to find what help us in using less computational complexity and since there is no significant score difference when utilizing different number of estimators as shown below, I will use the n_estimators = 100.
+
+    ```python
+       for i in range(100, 200, 10):
+          print((i, np.mean(cross_val_score(RandomForestRegressor(n_estimators = i), X, np.ravel(y)))))
+    ```
+
 
 ## Contact
 * You can email me on: amjad.baba91@gmail.com.  
