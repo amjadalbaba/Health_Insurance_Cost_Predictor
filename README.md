@@ -12,7 +12,7 @@ based on the company's data to extract some conclusions that would boost it's wo
 
 ### Resources Used
 * Python Version: 3.9.7
-* You can reach out the dataset used [here](https://www.kaggle.com/datasets/mirichoi0218/insurance)).
+* You can reach out the dataset used [here](https://www.kaggle.com/datasets/mirichoi0218/insurance).
 
 This dataset is made up of:
 
@@ -42,14 +42,17 @@ This dataset is made up of:
 After I imported the kaggle dataset, thankfully it was almost clean, but I edited some places such as:
 
 * Changing the smoker columns values like "yes" => 1 & "no" => 0.
+
     ```python
     all_data['smoker'] = all_data['smoker'].apply(lambda x: 1 if(x == 'yes') else 0)
     ```
 * Rounding the charges values in order to have more straightforward values.
+
     ```python
     all_data['charges'] = np.around(all_data['charges']) 
     ```
-* Exporing the new dataset..
+* Exporing the new dataset.
+
      ```python
     all_data.to_csv("cleaned_data.csv", index=False) 
     ```
@@ -57,6 +60,13 @@ After I imported the kaggle dataset, thankfully it was almost clean, but I edite
 ## Exploratory Data Analysis (EDA)
 I looked at the distributions of the data and the value counts for the various numerical & categorical variables. Below are a few highlights of the visualizations.
 
+![alt text](https://github.com/amjadalbaba/Health_Insurance_Cost_Predictor/blob/master/Images/heatmap.png)
+
+![alt text](https://github.com/amjadalbaba/Health_Insurance_Cost_Predictor/blob/master/Images/female_male_smoker_no_smoker.png)
+
+![alt text](https://github.com/amjadalbaba/Health_Insurance_Cost_Predictor/blob/master/Images/histograms.png)
+
+![alt text](https://github.com/amjadalbaba/Health_Insurance_Cost_Predictor/blob/master/Images/scatter.png)
 
 
 ## Contact
