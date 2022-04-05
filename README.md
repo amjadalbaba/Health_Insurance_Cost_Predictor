@@ -41,7 +41,7 @@ This dataset is made up of:
 ## Data Cleaning
 After I imported the kaggle dataset, thankfully it was almost clean, but I edited some places such as:
 
-* Changing the smoker columns values like "yes" => 1 & "no" => 0.
+* Changing the smoker column's values like "yes" => 1 & "no" => 0.
 
     ```python
     all_data['smoker'] = all_data['smoker'].apply(lambda x: 1 if(x == 'yes') else 0)
