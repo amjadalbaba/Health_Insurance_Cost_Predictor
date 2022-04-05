@@ -51,7 +51,7 @@ After I imported the kaggle dataset, thankfully it was almost clean, but I edite
     ```python
     all_data['charges'] = np.around(all_data['charges']) 
     ```
-* Exporing the new dataset.
+* Exporting the new dataset.
 
      ```python
     all_data.to_csv("cleaned_data.csv", index=False) 
