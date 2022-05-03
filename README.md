@@ -7,7 +7,7 @@ based on the company's data to extract some conclusions that would boost it's wo
 
 ## Project Overview
 * Created a tool that estimates the charge that a customer should pay based on his/her situation.
-* Drawing insights and some business startegies or plans that a health insurance company should implement.
+* Drawing insights and some business strategies or plans that a health insurance company should implement.
 * Used cross validation to draw out which will give the best model among: Linear, Lasso, and Random Forest Regressors.
 
 ### Resources Used
