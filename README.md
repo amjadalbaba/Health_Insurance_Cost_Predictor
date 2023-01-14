@@ -103,4 +103,4 @@ for i in range(100, 200, 10):
 
 ## Contact
 * You can email me on: amjad.baba91@gmail.com.  
-* Get in touch with my blog posts on [medium](https://medium.com/@amjad.baba913), and don't forget to drop your comments!
+* Get in touch with my blog posts on [medium](https://medium.com/@amjadelbaba), and don't forget to drop your comments!
